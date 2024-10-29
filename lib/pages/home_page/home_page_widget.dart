@@ -276,23 +276,55 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         height: 40.0,
                         padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primary,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Colors.white,
-                                  letterSpacing: 0.0,
-                                ),
-                        elevation: 0.0,
-                        borderRadius: BorderRadius.circular(20.0),
+                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 0.0, 0.0, 0.0),
+                        color: FlutterFlowTheme.of(context).primaryText,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .titleSmall
+                            .override(
+                              fontFamily: 'Readex Pro',
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              letterSpacing: 0.0,
+                            ),
+                        elevation: 2.0,
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).primaryText,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                  ].divide(const SizedBox(height: 30.0)),
+                    const SizedBox(height: 16.0),
+                    FFButtonWidget(
+                      onPressed: null, // No operation button
+                      text: 'No Operation Button',
+                      options: FFButtonOptions(
+                        height: 40.0,
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            16.0, 0.0, 16.0, 0.0),
+                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 0.0, 0.0, 0.0),
+                        color: FlutterFlowTheme.of(context).secondary,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .titleSmall
+                            .override(
+                              fontFamily: 'Readex Pro',
+                              color: Colors.white,
+                              letterSpacing: 0.0,
+                            ),
+                        elevation: 2.0,
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).secondary,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ].divide(const SizedBox(height: 30.0)),
+            ],
           ),
         ),
       ),
